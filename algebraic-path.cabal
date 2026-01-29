@@ -1,5 +1,5 @@
 cabal-version: 3.0
-name: posix-path
+name: algebraic-path
 version: 0
 synopsis: Flexible and simple path manipulation library
 description:
@@ -19,7 +19,7 @@ license-file: LICENSE
 
 source-repository head
   type: git
-  location: https://github.com/nikita-volkov/posix-path
+  location: https://github.com/nikita-volkov/algebraic-path
 
 common base
   default-language: Haskell2010
@@ -92,35 +92,35 @@ common test
 library
   import: base
   hs-source-dirs: src/library
-  exposed-modules: PosixPath
+  exposed-modules: AlgebraicPath
   other-modules:
   build-depends:
     QuickCheck >=2.14 && <3,
+    algebraic-path:ast,
+    algebraic-path:util,
     attoparsec >=0.13 && <0.15,
     base >=4.14 && <5,
     cereal ^>=0.5.8.3,
-    posix-path:ast,
-    posix-path:util,
     text-builder ^>=1.0,
 
 library ast
   import: base
   hs-source-dirs: src/ast
   exposed-modules:
-    PosixPath.Ast.Component
-    PosixPath.Ast.Name
-    PosixPath.Ast.Path
+    AlgebraicPath.Ast.Component
+    AlgebraicPath.Ast.Name
+    AlgebraicPath.Ast.Path
 
   other-modules:
-    PosixPath.Ast.Name.NameSegment
+    AlgebraicPath.Ast.Name.NameSegment
 
   build-depends:
     QuickCheck >=2.14 && <3,
+    algebraic-path:util,
     attoparsec >=0.13 && <0.15,
     cereal ^>=0.5.8.3,
     cereal-text ^>=0.1.0.2,
     natural-sort ^>=0.1.2,
-    posix-path:util,
     rerebase >=1.21 && <2,
     text-builder ^>=1.0,
 
@@ -128,9 +128,9 @@ library util
   import: base
   hs-source-dirs: src/util
   exposed-modules:
-    PosixPath.Util.List
-    PosixPath.Util.MonadPlus
-    PosixPath.Util.Prelude
+    AlgebraicPath.Util.List
+    AlgebraicPath.Util.MonadPlus
+    AlgebraicPath.Util.Prelude
 
   build-depends:
     QuickCheck >=2.14 && <3,
@@ -144,7 +144,7 @@ test-suite tests
   hs-source-dirs: src/tests
   main-is: Main.hs
   build-depends:
+    algebraic-path,
     hspec ^>=2.11.12,
-    posix-path,
     quickcheck-classes ^>=0.6.5.0,
     rerebase >=1.21 && <2,

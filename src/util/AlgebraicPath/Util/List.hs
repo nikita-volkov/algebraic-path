@@ -1,4 +1,4 @@
-module PosixPath.Util.List where
+module AlgebraicPath.Util.List where
 
 import Prelude
 

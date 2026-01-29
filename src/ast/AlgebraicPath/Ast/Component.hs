@@ -1,4 +1,4 @@
-module PosixPath.Ast.Component
+module AlgebraicPath.Ast.Component
   ( Component (..),
     attoparsecParserOf,
     toTextBuilder,
@@ -6,7 +6,7 @@ module PosixPath.Ast.Component
 where
 
 import Data.Attoparsec.Text qualified as Attoparsec
-import PosixPath.Ast.Name qualified as Name
+import AlgebraicPath.Ast.Name qualified as Name
 import TextBuilder qualified
 import Prelude
 

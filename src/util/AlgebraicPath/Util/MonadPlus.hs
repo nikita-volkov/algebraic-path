@@ -1,4 +1,4 @@
-module PosixPath.Util.MonadPlus where
+module AlgebraicPath.Util.MonadPlus where
 
 import Control.Monad
 import Prelude

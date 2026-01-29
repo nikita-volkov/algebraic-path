@@ -1,7 +1,7 @@
-# posix-path
+# algebraic-path
 
-[![Hackage](https://img.shields.io/hackage/v/posix-path.svg)](https://hackage.haskell.org/package/posix-path)
-[![Continuous Haddock](https://img.shields.io/badge/haddock-master-blue)](https://nikita-volkov.github.io/posix-path/)
+[![Hackage](https://img.shields.io/hackage/v/algebraic-path.svg)](https://hackage.haskell.org/package/algebraic-path)
+[![Continuous Haddock](https://img.shields.io/badge/haddock-master-blue)](https://nikita-volkov.github.io/algebraic-path/)
 
 Path library for Haskell that:
 

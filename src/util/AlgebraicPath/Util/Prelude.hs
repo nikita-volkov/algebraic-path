@@ -1,4 +1,4 @@
-module PosixPath.Util.Prelude
+module AlgebraicPath.Util.Prelude
   ( module X,
   )
 where

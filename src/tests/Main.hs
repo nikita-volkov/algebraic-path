@@ -1,6 +1,6 @@
 module Main where
 
-import PosixPath
+import AlgebraicPath
 import Test.Hspec
 import Test.Hspec.QuickCheck
 import Test.QuickCheck.Classes qualified
