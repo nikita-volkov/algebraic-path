@@ -6,9 +6,9 @@ module AlgebraicPath.Ast.Component
 where
 
 import AlgebraicPath.Ast.Name qualified as Name
+import AlgebraicPath.Util.Prelude
 import Data.Attoparsec.Text qualified as Attoparsec
 import TextBuilder qualified
-import Prelude
 
 data Component
   = NameComponent Name.Name
