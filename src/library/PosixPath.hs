@@ -485,7 +485,7 @@ toFilePath = toList . toText
 
 -- | Compile to text.
 toText :: Path -> Text
-toText = TextBuilder.run . toTextBuilder
+toText = TextBuilder.toText . toTextBuilder
 
 toAst :: Path -> Ast.Path.Path
 toAst = \case

@@ -50,8 +50,14 @@ instance QuickCheck.Arbitrary Name where
     extensions <- fmap NameSegment.toText <$> arbitrary
     pure (Name base extensions)
   shrink (Name base extensions) =
-    QuickCheck.shrink (base, extensions) <&> \(base, extensions) ->
-      Name base (List.filter (not . Text.null) extensions)
+    QuickCheck.shrink
+      ( Text.unpack base,
+        Text.unpack <$> extensions
+      )
+      <&> \(base, extensions) ->
+        Name
+          (Text.pack base)
+          (List.filter (not . Text.null) (Text.pack <$> extensions))
 
 instance Cereal.Serialize Name where
   put (Name base extensions) = do
@@ -147,7 +153,7 @@ toTextBuilder (Name base extensions) =
     extensions
 
 toText :: Name -> Text
-toText = TextBuilder.run . toTextBuilder
+toText = TextBuilder.toText . toTextBuilder
 
 toBaseSortKey :: Name -> NaturalSort.SortKey
 toBaseSortKey = NaturalSort.sortKey . toBase

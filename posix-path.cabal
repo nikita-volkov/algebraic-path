@@ -101,7 +101,7 @@ library
     cereal ^>=0.5.8.3,
     posix-path:ast,
     posix-path:util,
-    text-builder ^>=0.6.9,
+    text-builder ^>=1.0,
 
 library ast
   import: base
@@ -122,7 +122,7 @@ library ast
     natural-sort ^>=0.1.2,
     posix-path:util,
     rerebase >=1.21 && <2,
-    text-builder ^>=0.6.9,
+    text-builder ^>=1.0,
 
 library util
   import: base
