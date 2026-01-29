@@ -24,8 +24,6 @@ import AlgebraicPath.Util.Prelude hiding (empty, null)
 import Algorithms.NaturalSort qualified as NaturalSort
 import Data.Attoparsec.Text qualified as Attoparsec
 import Data.List qualified as List
-import Data.Serialize qualified as Cereal
-import Data.Serialize.Text ()
 import Data.Text qualified as Text
 import Test.QuickCheck qualified as QuickCheck
 import TextBuilder qualified
@@ -58,15 +56,6 @@ instance QuickCheck.Arbitrary Name where
         Name
           (Text.pack base)
           (List.filter (not . Text.null) (Text.pack <$> extensions))
-
-instance Cereal.Serialize Name where
-  put (Name base extensions) = do
-    Cereal.put base
-    Cereal.put extensions
-  get = do
-    base <- Cereal.get
-    extensions <- Cereal.get
-    return $ Name base extensions
 
 instance Ord Name where
   compare l r =

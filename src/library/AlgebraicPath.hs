@@ -46,7 +46,6 @@ import AlgebraicPath.Util.List qualified as List
 import AlgebraicPath.Util.Prelude hiding (null)
 import Data.Attoparsec.Text qualified as Attoparsec
 import Data.List qualified as List
-import Data.Serialize qualified as Cereal
 import Test.QuickCheck qualified as QuickCheck
 import TextBuilder qualified
 
@@ -238,27 +237,6 @@ instance QuickCheck.Arbitrary Path where
     RelNormalizedPath movesUp names ->
       QuickCheck.shrink (movesUp, names) <&> \(movesUp, names) ->
         RelNormalizedPath movesUp names
-
-instance Cereal.Serialize Path where
-  put = \case
-    AbsNormalizedPath names -> do
-      Cereal.put @Word8 0
-      Cereal.put names
-    RelNormalizedPath movesUp names -> do
-      Cereal.put @Word8 1
-      Cereal.put movesUp
-      Cereal.put names
-  get = do
-    tag <- Cereal.get @Word8
-    case tag of
-      0 -> do
-        names <- Cereal.get
-        return $ AbsNormalizedPath names
-      1 -> do
-        movesUp <- Cereal.get
-        names <- Cereal.get
-        return $ RelNormalizedPath movesUp names
-      _ -> fail $ "Invalid tag: " <> show tag
 
 instance Hashable Path where
   hashWithSalt salt = \case

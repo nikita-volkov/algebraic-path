@@ -100,7 +100,6 @@ library
     algebraic-path:util,
     attoparsec >=0.13 && <0.15,
     base >=4.14 && <5,
-    cereal ^>=0.5.8.3,
     text-builder ^>=1.0,
 
 library ast
@@ -118,8 +117,6 @@ library ast
     QuickCheck >=2.14 && <3,
     algebraic-path:util,
     attoparsec >=0.13 && <0.15,
-    cereal ^>=0.5.8.3,
-    cereal-text ^>=0.1.0.2,
     natural-sort ^>=0.1.2,
     rerebase >=1.21 && <2,
     text-builder ^>=1.0,
