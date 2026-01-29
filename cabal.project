@@ -4,3 +4,7 @@ allow-newer:
   *:base,
   *:ghc,
   *:template-haskell,
+
+constraints:
+  -- For GHC 8.10 compatibility builds in CI
+  aeson >=1,
