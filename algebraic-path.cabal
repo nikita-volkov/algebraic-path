@@ -1,6 +1,6 @@
 cabal-version: 3.0
 name: algebraic-path
-version: 0.1
+version: 0.1.0.1
 synopsis: Flexible and simple path manipulation library
 description:
   Path library that:
@@ -117,8 +117,9 @@ library ast
     QuickCheck >=2.14 && <3,
     algebraic-path:util,
     attoparsec >=0.13 && <0.15,
+    base >=4.14 && <5,
     natural-sort ^>=0.1.2,
-    rerebase >=1.21 && <2,
+    text >=1.2 && <3,
     text-builder ^>=1.0,
 
 library util

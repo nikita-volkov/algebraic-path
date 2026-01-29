@@ -7,9 +7,9 @@ where
 
 import AlgebraicPath.Ast.Component qualified as Component
 import AlgebraicPath.Util.MonadPlus
+import AlgebraicPath.Util.Prelude
 import Data.Attoparsec.Text qualified as Attoparsec
 import TextBuilder qualified as TextBuilder
-import Prelude
 
 data Path
   = Path Bool [Component.Component]
