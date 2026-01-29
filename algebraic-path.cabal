@@ -1,6 +1,6 @@
 cabal-version: 3.0
 name: algebraic-path
-version: 0.1
+version: 0.1.0.1
 synopsis: Flexible and simple path manipulation library
 description:
   Path library that:
