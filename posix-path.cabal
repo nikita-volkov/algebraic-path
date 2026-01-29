@@ -5,10 +5,10 @@ synopsis: Flexible and simple path manipulation library
 description:
   Path library that:
 
+  - Models paths in canonical form
   - Makes paths monoidally composable and provides a rich algebra
   - Avoids type-level wizardry
-  - Doesn't target Windows
-    - Thus maintaining focus and avoiding quirks
+  - Doesn't target Windows thus maintaining focus and avoiding quirks
 
 category: Path, FilePath, Filesystem
 author: Nikita Volkov <nikita.y.volkov@mail.ru>
