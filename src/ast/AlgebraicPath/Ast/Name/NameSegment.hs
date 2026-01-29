@@ -5,11 +5,11 @@ module AlgebraicPath.Ast.Name.NameSegment
   )
 where
 
+import AlgebraicPath.Util.Prelude
 import Algorithms.NaturalSort qualified
 import Data.Attoparsec.Text qualified as Attoparsec
 import Data.List qualified as List
 import Data.Text qualified as Text
-import AlgebraicPath.Util.Prelude
 import Test.QuickCheck qualified as QuickCheck
 
 newtype NameSegment = NameSegment Text

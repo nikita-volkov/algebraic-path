@@ -5,9 +5,9 @@ module AlgebraicPath.Ast.Path
   )
 where
 
-import Data.Attoparsec.Text qualified as Attoparsec
 import AlgebraicPath.Ast.Component qualified as Component
 import AlgebraicPath.Util.MonadPlus
+import Data.Attoparsec.Text qualified as Attoparsec
 import TextBuilder qualified as TextBuilder
 import Prelude
 

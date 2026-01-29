@@ -39,14 +39,14 @@ module AlgebraicPath
   )
 where
 
-import Data.Attoparsec.Text qualified as Attoparsec
-import Data.List qualified as List
-import Data.Serialize qualified as Cereal
 import AlgebraicPath.Ast.Component qualified as Ast.Component
 import AlgebraicPath.Ast.Name qualified as Ast.Name
 import AlgebraicPath.Ast.Path qualified as Ast.Path
 import AlgebraicPath.Util.List qualified as List
 import AlgebraicPath.Util.Prelude hiding (null)
+import Data.Attoparsec.Text qualified as Attoparsec
+import Data.List qualified as List
+import Data.Serialize qualified as Cereal
 import Test.QuickCheck qualified as QuickCheck
 import TextBuilder qualified
 

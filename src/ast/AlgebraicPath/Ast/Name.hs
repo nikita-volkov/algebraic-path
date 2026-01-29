@@ -18,15 +18,15 @@ module AlgebraicPath.Ast.Name
   )
 where
 
+import AlgebraicPath.Ast.Name.NameSegment qualified as NameSegment
+import AlgebraicPath.Util.MonadPlus
+import AlgebraicPath.Util.Prelude hiding (empty, null)
 import Algorithms.NaturalSort qualified as NaturalSort
 import Data.Attoparsec.Text qualified as Attoparsec
 import Data.List qualified as List
 import Data.Serialize qualified as Cereal
 import Data.Serialize.Text ()
 import Data.Text qualified as Text
-import AlgebraicPath.Ast.Name.NameSegment qualified as NameSegment
-import AlgebraicPath.Util.MonadPlus
-import AlgebraicPath.Util.Prelude hiding (empty, null)
 import Test.QuickCheck qualified as QuickCheck
 import TextBuilder qualified
 
